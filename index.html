@@ -4,16 +4,27 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Spinther Light</title>
-<meta name="description" content="Spinther Light — ideas que brillan en cada toque.">
+<meta name="description" content="Spinther Light — desarrollo de apps para celulares con IA.">
 <link rel="icon" href="logo.jpg">
 <style>
-  :root { --fondo: #e8eef8; --texto: #1d2b4f; --suave: #5a6785; --enlace: #1f5fd6; }
+  :root { --fondo: #e8eef8; --texto: #1d2b4f; --suave: #5a6785; --enlace: #1f5fd6; --marco: #111; }
   html, body { margin: 0; min-height: 100%; background: var(--fondo); color: var(--texto);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
   main { min-height: 100vh; display: flex; flex-direction: column; align-items: center;
-    justify-content: center; gap: 32px; padding: 24px 16px; box-sizing: border-box; text-align: center; }
-  img { width: min(520px, 100%); height: auto; border-radius: 6%; display: block;
+    justify-content: center; gap: 40px; padding: 32px 16px; box-sizing: border-box; text-align: center; }
+  .fila { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 48px; }
+  .logo { width: min(460px, 100%); height: auto; border-radius: 6%; display: block;
     box-shadow: 0 20px 50px rgba(11, 26, 58, .25); }
+  figure { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 20px; }
+  .celular { position: relative; width: min(280px, 72vw); padding: 12px; background: var(--marco);
+    border-radius: 48px; box-shadow: 0 0 0 2px #3a3a3a, 0 24px 60px rgba(11, 26, 58, .35); }
+  .celular::before, .celular::after { content: ""; position: absolute; width: 4px; background: #2a2a2a;
+    border-radius: 2px; }
+  .celular::before { left: -5px; top: 120px; height: 56px; }
+  .celular::after { right: -5px; top: 150px; height: 84px; }
+  .celular img { display: block; width: 100%; height: auto; border-radius: 37px; }
+  figcaption { max-width: 320px; font-size: 18px; line-height: 1.4; font-weight: 600; }
+  .hashtag { display: block; margin-top: 6px; font-size: 15px; font-weight: 700; letter-spacing: .04em; color: var(--enlace); }
   .contacto { font-size: 15px; letter-spacing: .12em; text-transform: uppercase; color: var(--suave); }
   .contacto a { display: inline-block; margin-top: 6px; font-size: 18px; letter-spacing: 0;
     text-transform: none; color: var(--enlace); text-decoration: none; font-weight: 600; }
@@ -22,7 +33,18 @@
 </head>
 <body>
 <main>
-  <img src="logo.jpg" alt="Spinther Light — Ideas que brillan en cada toque">
+  <div class="fila">
+    <img class="logo" src="logo.jpg" alt="Spinther Light — Ideas que brillan en cada toque">
+    <figure>
+      <div class="celular">
+        <img src="app.jpg" alt="Pantalla de inicio de SustainTrack en un iPhone">
+      </div>
+      <figcaption>
+        Hacemos desarrollo de apps para celulares con IA.
+        <span class="hashtag">#SPINTHERLIGHTAPPS</span>
+      </figcaption>
+    </figure>
+  </div>
   <div class="contacto">
     Contact us:<br>
     <a href="mailto:contact@spintherlight.com">contact@spintherlight.com</a>
